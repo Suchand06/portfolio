@@ -108,19 +108,19 @@ export const Skills = () => {
                   {cat.skills.map((skill) => (
                     <div
                       key={skill.name}
-                      className="group/item flex items-center justify-between p-2.5 rounded-xl bg-zinc-900/70 hover:bg-zinc-800 border border-white/[0.04] hover:border-violet-500/30 transition-all duration-200"
+                      className="group/item flex items-center gap-3 p-2.5 sm:p-3 rounded-xl bg-zinc-900/60 hover:bg-zinc-800/90 border border-white/[0.04] hover:border-violet-500/30 transition-all duration-200"
                     >
-                      <div className="flex items-center gap-2.5 min-w-0">
-                        <div className="w-6 h-6 rounded-lg bg-zinc-950 flex items-center justify-center shrink-0 border border-white/5">
-                          <TechIcon name={skill.icon} className="w-3.5 h-3.5" />
-                        </div>
-                        <span className="text-xs font-semibold text-zinc-200 truncate group-hover/item:text-white">
-                          {skill.name}
-                        </span>
+                      <div className="w-8 h-8 rounded-lg bg-zinc-950 flex items-center justify-center shrink-0 border border-white/5 group-hover/item:border-violet-500/30 transition-colors">
+                        <TechIcon name={skill.icon} className="w-4 h-4" />
                       </div>
-                      <span className="text-[10px] font-mono text-zinc-500 px-1.5 py-0.5 rounded bg-zinc-950 border border-white/5 shrink-0 ml-1">
-                        {skill.tag}
-                      </span>
+                      <div className="min-w-0 flex-1">
+                        <div className="text-xs font-semibold text-zinc-200 group-hover/item:text-white truncate leading-snug">
+                          {skill.name}
+                        </div>
+                        <div className="text-[10px] sm:text-[11px] font-mono text-zinc-500 truncate mt-0.5">
+                          {skill.tag}
+                        </div>
+                      </div>
                     </div>
                   ))}
                 </div>
